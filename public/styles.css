@@ -1,0 +1,58 @@
+body {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+  background-color: aqua;
+  margin: 20px;
+  text-align: center;
+}
+
+nav {
+  background-color: blue;
+  color: aqua;
+  padding: 1.5rem;
+}
+
+nav ul {
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: darkblue;
+  padding: 1rem;
+}
+
+a:visited {
+  color: whitesmoke;
+}
+
+main ul {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 50px;
+}
+
+main li {
+  background-color: darkblue;
+  color: whitesmoke;
+  border: 2px solid blue;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-align: left;
+}

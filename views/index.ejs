@@ -7,17 +7,26 @@
   <title>Home</title>
 </head>
 <body>
-  <%- include ('navbar', {links: links}) %>
-  <head>
+  <header>
     <h1>Mini Message Board</h1>
     <h2>Do you have a message to share?</h2>
-  </head>
+    <button>
+      <a href="/new">
+        New message
+      </a>
+    </button>
+  </header>
   <main>
-    <ul>
-        <% messages.forEach((message) => { %>
-        <%- include('messages/message', {message: message}) %>
-        <% }) %>
-    </ul>
+      <% messages.forEach((message) => { %>
+        <div>
+          <p>From: <%= message.user %> </p>
+          <p>Message: <%= message.text %> </p>
+          <p>Sent: <%= message.added %> </p>
+          <button>
+            <a href="/message/<%= message.id %>">Open</a>
+          </button>
+        </div>
+      <% }) %>
   </main>
 </body>
 </html>

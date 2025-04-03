@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles.css">
-  <title>Message</title>
+  <title><%= title %></title>
 </head>
 <body>
   <header>
-    <h1>Message</h1>
+    <h1><%= title %></h1>
   </header>
   <main>
     <div>
-      <p>From: <%= messageDetail.user %> </p>
-      <p>Message: <%= messageDetail.text %> </p>
-      <p>Sent: <%= messageDetail.added %> </p>
+      <p>From: <%= messageDetail.username %> </p>
+      <p>Message: <%= messageDetail.messagetext %> </p>
+      <p>Sent: <%= dateTime.getDateTime(messageDetail.added) %> </p>
       <button>
         <a href="/">Close</a>
       </button>

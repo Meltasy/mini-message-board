@@ -9,3 +9,4 @@ This is a mini project to practice my skills:
 * using middleware to handle requests and responses
 * using controllers to handle data
 * using ejs to create views, ie. user-facing content
+* using a database with postgreSQL

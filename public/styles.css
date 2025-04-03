@@ -34,7 +34,7 @@ div button {
   float: right;
 }
 
-form {
+form.new {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

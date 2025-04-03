@@ -1,0 +1,26 @@
+const pool = require('./pool')
+
+// const getDateTime = () => {
+//   const getDate = new Date().toString().split(' ')
+//   return getDate.slice(0, 3).join(' ') + ' ' + getDate[4].substring(0, 5)
+// }
+
+async function getAllMessages() {
+  const { rows } = await pool.query('SELECT * FROM messages')
+  return rows
+}
+
+async function insertMessage(username, messagetext) {
+  await pool.query('INSERT INTO messages (username, messagetext, added) VALUES ($1, $2, $3)', [username, messagetext, new Date()])
+}
+
+async function getOneMessageDetail(id) {
+  const { rows } = await pool.query('SELECT * FROM messages WHERE id = $1', [id])
+  return rows[0]
+}
+
+module.exports = {
+  getAllMessages,
+  insertMessage,
+  getOneMessageDetail,
+}

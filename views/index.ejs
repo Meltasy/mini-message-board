@@ -21,7 +21,6 @@
         <div>
           <p>From: <%= message.username %> </p>
           <p>Message: <%= message.messagetext %> </p>
-          <!-- How do I make this date show as a user friendly date? -->
           <p>Sent: <%= dateTime.getDateTime(message.added) %> </p>
           <form method="GET" action="/message">
             <input type="hidden" name="id" value="<%= message.id %>">

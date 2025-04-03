@@ -14,7 +14,10 @@
     <div>
       <p>From: <%= messageDetail.username %> </p>
       <p>Message: <%= messageDetail.messagetext %> </p>
-      <p>Sent: <%= dateTime.getDateTime(messageDetail.added) %> </p>
+      <p>Sent:
+        <%= new Date(messageDetail.added).toString().split(' ').slice(0, 3).join(' ') %> 
+        <%= new Date(messageDetail.added).toString().split(' ').slice(4, 5).join(' ') %> 
+      </p>
       <button>
         <a href="/">Close</a>
       </button>

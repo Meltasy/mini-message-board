@@ -1,10 +1,5 @@
 const pool = require('./pool')
 
-// const getDateTime = () => {
-//   const getDate = new Date().toString().split(' ')
-//   return getDate.slice(0, 3).join(' ') + ' ' + getDate[4].substring(0, 5)
-// }
-
 async function getAllMessages() {
   const { rows } = await pool.query('SELECT * FROM messages')
   return rows

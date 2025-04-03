@@ -34,36 +34,9 @@ async function getMessageDetail(req, res) {
   })
 }
 
-// async function getMessageDetail(req, res) {
-//   const messageDetail = await db.getOneMessageDetail(id)
-//   console.log('Messsage Detail: ', messageDetail)
-//   res.render('messageDetail', {
-//     title: 'Message Detail',
-//     messageDetail: messageDetail
-//   })
-// }
-
 module.exports = {
   getMessages,
   createMessageGet,
   createMessagePost,
   getMessageDetail,
 }
-
-// const messages = require('../data/messageData')
-// const asyncHandler = require('express-async-handler')
-
-// const getMessageById = asyncHandler(async (req, res) => {
-//   const { messageId } = req.params
-
-//   const messageDetail = await messages.getMessageById(Number(messageId))
-
-//   if (!messageDetail) {
-//     res.status(404).send(`Message ${messageId} not found`)
-//     return
-//   }
-
-//   res.render('messageDetail', { messageDetail: messageDetail })
-// })
-
-// module.exports = { getMessageById }

@@ -7,12 +7,4 @@ messageRouter.get('/new', messageController.createMessageGet)
 messageRouter.post('/new', messageController.createMessagePost)
 messageRouter.get('/message', messageController.getMessageDetail)
 
-// const { getMessageById } = require('../controllers/messageController')
-
-// messageRouter.get('/', (req, res) => {
-//   res.render('messageDetail', { messages: messages })
-// })
-
-// messageRouter.get('/:messageId', getMessageById)
-
 module.exports = messageRouter

@@ -21,7 +21,10 @@
         <div>
           <p>From: <%= message.username %> </p>
           <p>Message: <%= message.messagetext %> </p>
-          <p>Sent: <%= dateTime.getDateTime(message.added) %> </p>
+          <p>Sent:
+            <%= new Date(message.added).toString().split(' ').slice(0, 3).join(' ') %> 
+            <%= new Date(message.added).toString().split(' ').slice(4, 5).join(' ') %> 
+          </p>
           <form method="GET" action="/message">
             <input type="hidden" name="id" value="<%= message.id %>">
             <button type="submit">Open</button>

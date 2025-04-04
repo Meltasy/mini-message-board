@@ -1,7 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const app = express()
-const PORT = process.env.PORTUI
+const PORT = process.env.PORTUI || 8080
 const path = require('node:path')
 const assetsPath = path.join(__dirname, 'public')
 const messageRouter = require('./routes/messageRouter')

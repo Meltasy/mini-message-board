@@ -21,7 +21,6 @@ VALUES
 
 async function main() {
   console.log('seeding...')
-  console.log('Connection String:', process.env.DATABASE_PUBLIC_URL)
   const client = new Client({
     connectionString: process.env.DATABASE_PUBLIC_URL
   })
